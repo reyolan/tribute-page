@@ -44,14 +44,14 @@ img {
 	color: white;
 	display: inline-block;
 	margin: 0 0.2rem;
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 }
 
 #hamburger-icon {
 	cursor: pointer;
 	font-size: 2.5rem;
 	color: white;
-	margin: 2rem 0.5rem;
+	margin: 2rem 1rem;
 }
 
 #toggle-menu {
@@ -241,15 +241,23 @@ span {
 	text-align: center;
 }
 
-@media screen and (min-width: 505px) {
+@media screen and (min-width: 800px) {
 	#nav-menu {
 		display: flex;
-		padding: 0.5rem 4rem;
+		padding: 0.5rem 10rem;
 	}
 
 	#nav-main {
 		display: flex;
 		align-items: center;
+		gap: 3rem;
+	}
+
+	#nav-main a {
+		padding: 0;
+		display: block;
+		margin: 0;
+		font-size: 2rem;
 	}
 
 	#hamburger-icon {
