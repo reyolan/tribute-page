@@ -7,39 +7,95 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
 }
 
 img {
 	max-width: 100%;
+}
+
+#nav-menu {
+	position: fixed;
+	background-color: rgba(15, 15, 15, 0.8);
+	color: white;
+	width: 100%;
+}
+
+#nav-main {
+	display: none;
+}
+
+#nav-img {
+	display: none;
+}
+
+#nav-main li {
+	text-align: center;
+	margin: 0.5rem auto;
+	list-style-type: none;
+}
+
+#nav-main a {
+	padding: 0.4rem 0.6rem;
+	color: white;
+	display: inline-block;
+	margin: 0 0.2rem;
+	font-size: 1.8rem;
+}
+
+#hamburger-icon {
+	cursor: pointer;
+	font-size: 2.5rem;
+	color: white;
+	margin: 2rem 0.5rem;
+}
+
+#toggle-menu {
+	display: none;
+}
+
+#toggle-menu:checked + #nav-main {
 	display: block;
-	margin: auto;
+}
+
+#tribute-link:hover,
+#nav-main a:hover {
+	color: gray;
+	transition: 0.3s;
+}
+
+a:visited {
+	color: inherit;
 }
 
 #main {
 	min-height: 100vh;
 }
 
-nav {
-	position: absolute;
-	text-align: right;
-	background: black;
-	position: fixed;
-	width: 100%;
-	max-width: 100%;
-	padding: 0.5em 2em;
+#toggle-menu {
+	display: none;
+}
+
+#nav-img {
+	filter: invert(1);
+	width: 3rem;
 }
 
 #header-div {
 	display: flex;
-	background-size: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url("./img/bg-title.jpg");
+	background-size: cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+		url("./img/bg-title.jpg") no-repeat center;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 4rem 8rem;
-	padding: 4rem;
-	height: 100%;
+	padding: 8rem 0;
+	min-height: 100vh;
 }
 
 #title-div {
@@ -53,17 +109,17 @@ nav {
 }
 
 #title-img-div > img {
-	width: 20em;
+	width: 25em;
 	border-radius: 5px;
 	border: darkgray solid 1px;
 }
 
 h1 {
-	font-size: 6rem;
+	font-size: 8rem;
 }
 
 .title-caption {
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 #img-div {
@@ -72,15 +128,15 @@ h1 {
 }
 
 #image {
-	width: 35rem;
+	width: 50rem;
 	margin-bottom: 0.6rem;
 	border-radius: 5px;
 	border: black solid 1px;
 }
 
 #img-caption {
-	font-weight: 700;
-	font-size: 1.6rem;
+	font-weight: bold;
+	font-size: 1.8rem;
 }
 
 #tribute-info {
@@ -92,7 +148,7 @@ h1 {
 
 h2 {
 	text-decoration: underline;
-	font-size: 3rem;
+	font-size: 4rem;
 	text-align: center;
 	margin-bottom: 1.5rem;
 }
@@ -111,11 +167,11 @@ h2 {
 #biography-div > p,
 #timeline-div > ul {
 	max-width: 75ch;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
 #biography-div > p > strong {
-	font-size: 1.6em;
+	font-size: 2em;
 }
 
 #timeline-div {
@@ -138,7 +194,7 @@ span {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: 1.5rem;
+	gap: 2rem;
 	background: black;
 	color: white;
 }
@@ -159,11 +215,6 @@ span {
 	font-weight: 500;
 }
 
-#tribute-link {
-	width: 100%;
-	font-size: 3rem;
-}
-
 #tribute-question {
 	padding: 2em;
 	padding: 2rem 4rem;
@@ -179,7 +230,7 @@ span {
 
 #question-div {
 	width: 20ch;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-weight: bold;
 	text-align: center;
 }
@@ -188,4 +239,28 @@ span {
 	font-size: 2.5rem;
 	max-width: 30ch;
 	text-align: center;
+}
+
+@media screen and (min-width: 505px) {
+	#nav-menu {
+		display: flex;
+		padding: 0.5rem 4rem;
+	}
+
+	#nav-main {
+		display: flex;
+		align-items: center;
+	}
+
+	#hamburger-icon {
+		display: none;
+	}
+
+	#toggle-menu:checked + #nav-main {
+		display: flex;
+	}
+
+	#nav-img {
+		display: block;
+	}
 }
