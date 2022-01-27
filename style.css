@@ -5,6 +5,12 @@
 	text-decoration: none;
 }
 
+body {
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
@@ -13,6 +19,8 @@ html {
 
 body {
 	font-family: "Roboto", sans-serif;
+	animation: fadeInAnimation ease 1s 1;
+	animation-fill-mode: forwards;
 }
 
 img {
@@ -252,6 +260,15 @@ span {
 	font-size: 2.5rem;
 	max-width: 30ch;
 	text-align: center;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width: 800px) {
