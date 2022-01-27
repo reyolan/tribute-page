@@ -8,6 +8,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
 }
 
 body {
@@ -112,6 +113,13 @@ a:visited {
 	width: 25em;
 	border-radius: 5px;
 	border: darkgray solid 1px;
+	transform: scale(1);
+	transition: 0.3s ease-in-out;
+}
+
+#title-img-div > img:hover {
+	transform: scale(1.2);
+	opacity: 0.9;
 }
 
 h1 {
@@ -203,11 +211,16 @@ span {
 	text-align: center;
 }
 
-.discoveries-img > img {
+.discoveries-img img {
 	width: 32rem;
 	height: 24rem;
 	margin-top: 1.2rem;
 	margin-bottom: 0.5rem;
+}
+
+.discoveries-img a:hover {
+	opacity: 0.7;
+	transition: 0.3s ease-in-out;
 }
 
 .discoveries-img > p {
@@ -242,6 +255,10 @@ span {
 }
 
 @media screen and (min-width: 800px) {
+	html {
+		scroll-padding-top: 2.8rem;
+	}
+
 	#nav-menu {
 		display: flex;
 		padding: 0.5rem 10rem;
