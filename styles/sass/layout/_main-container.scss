@@ -1,0 +1,113 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+}
+
+body {
+	animation: fadeInAnimation ease 1s 1;
+	animation-fill-mode: forwards;
+}
+
+img {
+	max-width: 100%;
+}
+
+#main {
+	min-height: 100vh;
+
+	#img-div {
+		text-align: center;
+		padding: 2rem 4rem;
+
+		#image {
+			width: 60rem;
+			margin-bottom: 0.6rem;
+			border-radius: 5px;
+			border: black solid 1px;
+		}
+	}
+
+	#tribute-info {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#tribute-question {
+		padding: 2rem 4rem;
+	}
+}
+
+#tribute-info {
+	#biography-div {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		background: black;
+		color: white;
+		padding: 2rem 4rem;
+		width: 100%;
+	}
+
+	#discoveries-div {
+		background: black;
+		color: white;
+		width: 100%;
+		padding: 2rem 4rem;
+	}
+}
+
+#discoveries-img-div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	background: black;
+	color: white;
+
+	.discoveries-img {
+		text-align: center;
+
+		& img {
+			width: 32rem;
+			height: 24rem;
+			margin-top: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		& a:hover {
+			opacity: 0.7;
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
+
+#tribute-question {
+	#question-answer-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem 4rem;
+		flex-wrap: wrap;
+
+		#question-div {
+			width: 20ch;
+		}
+
+		#answer-div {
+			max-width: 30ch;
+		}
+	}
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

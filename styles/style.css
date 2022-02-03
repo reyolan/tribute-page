@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+a:visited {
+  color: inherit;
+}
+
+#main #nav-menu {
+  color: white;
+}
+#main #nav-menu #hamburger-icon {
+  font-size: 2.5rem;
+  color: white;
+}
+#main #nav-main a {
+  font-size: 2.2rem;
+  color: white;
+}
+#main #nav-main li {
+  text-align: center;
+}
+#main #nav-main a:hover {
+  color: gray;
+}
+#main #nav-main #tribute-link:hover {
+  color: gray;
+}
+#main #header-div #title-div {
+  color: white;
+  text-align: center;
+}
+#main #header-div #title-div .title-caption {
+  font-size: 3rem;
+}
+#main #img-div {
+  text-align: center;
+}
+#main #img-div #img-caption {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+#tribute-info #biography-div > p {
+  max-width: 75ch;
+  font-size: 1.8rem;
+}
+#tribute-info #biography-div > p strong {
+  font-size: 2rem;
+}
+#tribute-info #timeline-div {
+  padding: 2rem 4rem;
+}
+#tribute-info #timeline-div > ul {
+  max-width: 75ch;
+  font-size: 1.8rem;
+}
+
+.discoveries-img > p {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+#question-answer-div #answer-div {
+  font-size: 2.5rem;
+  text-align: center;
+}
+#question-answer-div #question-div {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#header-div {
+  display: flex;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("./../img/bg-title.jpg") no-repeat center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem 8rem;
+  padding: 8rem 0;
+  min-height: 100vh;
+}
+
+#title-div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#title-img-div img {
+  width: 32em;
+  border-radius: 5px;
+  border: darkgray solid 1px;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+#title-img-div img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  animation: fadeInAnimation ease 1s 1;
+  animation-fill-mode: forwards;
+}
+
+img {
+  max-width: 100%;
+}
+
+#main {
+  min-height: 100vh;
+}
+#main #img-div {
+  text-align: center;
+  padding: 2rem 4rem;
+}
+#main #img-div #image {
+  width: 60rem;
+  margin-bottom: 0.6rem;
+  border-radius: 5px;
+  border: black solid 1px;
+}
+#main #tribute-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#main #tribute-question {
+  padding: 2rem 4rem;
+}
+
+#tribute-info #biography-div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 2rem 4rem;
+  width: 100%;
+}
+#tribute-info #discoveries-div {
+  background: black;
+  color: white;
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+#discoveries-img-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: black;
+  color: white;
+}
+#discoveries-img-div .discoveries-img {
+  text-align: center;
+}
+#discoveries-img-div .discoveries-img img {
+  width: 32rem;
+  height: 24rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+#discoveries-img-div .discoveries-img a:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+#tribute-question #question-answer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 4rem;
+  flex-wrap: wrap;
+}
+#tribute-question #question-answer-div #question-div {
+  width: 20ch;
+}
+#tribute-question #question-answer-div #answer-div {
+  max-width: 30ch;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#nav-menu {
+  position: fixed;
+  background-color: rgba(15, 15, 15, 0.8);
+  width: 100%;
+}
+#nav-menu #hamburger-icon {
+  cursor: pointer;
+  margin: 2rem 1rem;
+}
+#nav-menu #nav-main {
+  display: none;
+}
+#nav-menu #toggle-menu {
+  display: none;
+}
+
+#nav-main li {
+  margin: 0.5rem auto;
+  list-style-type: none;
+}
+#nav-main a {
+  padding: 0.4rem 0.6rem;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+#nav-main a:hover {
+  transition: 0.3s;
+}
+#nav-main #nav-img {
+  display: none;
+  filter: invert(1);
+  width: 3rem;
+}
+#nav-main #tribute-link:hover {
+  transition: 0.3s;
+}
+
+#toggle-menu:checked + #nav-main {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    scroll-padding-top: 2.8rem;
+  }
+
+  #nav-menu {
+    display: flex;
+    padding: 0.5em 10em;
+  }
+  #nav-menu #hamburger-icon {
+    display: none;
+  }
+  #nav-menu #nav-main {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+  }
+  #nav-menu #nav-main a {
+    padding: 0;
+    display: block;
+    margin: 0;
+    font-size: 2em;
+  }
+  #nav-menu #nav-main #nav-img {
+    display: block;
+  }
+
+  #toggle-menu:checked + #nav-main {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
